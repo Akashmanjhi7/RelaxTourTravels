@@ -203,8 +203,9 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 text-2xl font-serif font-bold text-white z-50 hover:text-yellow-500 transition-colors"
         >
-          <Compass className="text-yellow-500" />
-          RELAX TOURS
+          {/* //<Compass className="text-yellow-500" /> */}
+          <img src="/LOGO/RELAX_LOGO.png" alt="RR" className="h-12" />
+          RR Travels
         </Link>
 
         {/* DESKTOP MENU */}
