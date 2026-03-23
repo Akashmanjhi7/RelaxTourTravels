@@ -33,6 +33,7 @@ export default function HomeClient() {
 
   return (
     <>
+      
       <Hero />
 
       <TripsSection onEnquiry={enquiry.openEnquiry} />
