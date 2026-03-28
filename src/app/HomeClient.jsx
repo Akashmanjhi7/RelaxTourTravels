@@ -1,16 +1,19 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-import Hero from '@/components/Hero';
-import TripsSection from '@/components/TripsSection';
-import InternationalSection from '@/components/InternationalSection';
-import BookingServices from '@/components/BookingServices';
-import Contact from '@/components/Contact';
-import EnquiryModal from '@/components/EnquiryModal';
+import Hero from "@/components/Hero";
+import TripsSection from "@/components/DomesticSection";
+import InternationalSection from "@/components/InternationalSection";
+import BookingServices from "@/components/BookingServices";
+import Contact from "@/components/Contact";
+import EnquiryModal from "@/components/EnquiryModal";
 
-import { useEnquiry } from '@/hooks/useEnquiry';
+import { useEnquiry } from "@/hooks/useEnquiry";
+import DomesticSection from "@/components/DomesticSection";
+import { Inter } from "next/font/google";
+import InternationalJobs from "@/components/InternationalJobs";
 
 export default function HomeClient() {
   const router = useRouter();
@@ -18,30 +21,26 @@ export default function HomeClient() {
   const enquiry = useEnquiry();
 
   useEffect(() => {
-    const scrollTarget = searchParams.get('scrollTo');
+    const scrollTarget = searchParams.get("scrollTo");
     if (!scrollTarget) return;
 
     const element = document.getElementById(scrollTarget);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
 
     // clean only query param
     const params = new URLSearchParams(searchParams.toString());
-    params.delete('scrollTo');
+    params.delete("scrollTo");
 
     router.replace(`/?${params.toString()}`, { scroll: false });
   }, [searchParams, router]);
 
   return (
     <>
-      
       <Hero />
-
-      <TripsSection onEnquiry={enquiry.openEnquiry} />
-
+      <DomesticSection onEnquiry={enquiry.openEnquiry} />
       <InternationalSection onEnquiry={enquiry.openEnquiry} />
-
+      <InternationalJobs />
       <BookingServices />
-
       <section id="contact">
         <Contact />
       </section>
