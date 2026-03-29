@@ -46,25 +46,34 @@ Thank you.
               planning or consultancy.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {[
                 {
                   icon: MapPin,
                   title: "Visit Us",
-                  desc: "Shop 42, Sector 37 , Main Market Faridabad, Haryana",
+                  desc: "Shop 42, Sector 37, Main Market Faridabad, Haryana",
+                  link: "https://www.google.com/maps/search/?api=1&query=Shop+42+Sector+37+Faridabad",
                 },
                 {
                   icon: Phone,
                   title: "Call Us",
                   desc: "+91 98765 43210",
+                  link: "tel:+919876543210",
                 },
                 {
                   icon: Mail,
                   title: "Email Us",
                   desc: "relaxroutetravels@gmail.com",
+                  link: "mailto:relaxroutetravels@gmail.com",
                 },
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
+                <a
+                  key={idx}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-lg transition-all duration-300 hover:bg-white/5 hover:scale-[1.02]"
+                >
                   <div className="p-3 bg-white/5 rounded-full text-yellow-500">
                     <item.icon className="w-6 h-6" />
                   </div>
@@ -73,7 +82,7 @@ Thank you.
                     <h4 className="text-white font-bold">{item.title}</h4>
                     <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
 
@@ -124,7 +133,7 @@ Thank you.
 
               <button
                 type="submit"
-                className="w-full bg-slate-900 text-yellow-500 border-2 border-yellow-500 font-bold py-3  uppercase tracking-widest hover:bg-yellow-500 hover:text-slate-900 hover:border-slate-900 transition-colors transform duration-300 ease-in-out"
+                className="w-full bg-slate-900 text-yellow-500 border-2 border-yellow-500 font-bold py-3 uppercase tracking-widest hover:bg-yellow-500 hover:text-slate-900 hover:border-slate-900 transition-all duration-300"
               >
                 Send Message
               </button>
