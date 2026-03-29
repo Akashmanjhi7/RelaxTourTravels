@@ -51,7 +51,7 @@ Thank you.
                 {
                   icon: MapPin,
                   title: "Visit Us",
-                  desc: "Shop 42, Relax Tower, Main Market, New Delhi",
+                  desc: "Shop 42, Sector 37 , Main Market Faridabad, Haryana",
                 },
                 {
                   icon: Phone,
@@ -61,7 +61,7 @@ Thank you.
                 {
                   icon: Mail,
                   title: "Email Us",
-                  desc: "bookings@relaxtour.com",
+                  desc: "relaxroutetravels@gmail.com",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4">

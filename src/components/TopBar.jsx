@@ -30,7 +30,7 @@ export default function TopBar() {
 
         {/* Email */}
         <a
-          href="mailto:info@relaxroutetravels.com/"
+          href="mailto:relaxroutetravels@gmail.com"
           className="hidden md:flex items-center gap-2 hover:text-black transition-colors group"
         >
           <svg
@@ -48,7 +48,7 @@ export default function TopBar() {
             <path d="m22 2-7 20-4-9-9-4Z"></path>
             <path d="M22 2 11 13"></path>
           </svg>
-          <span>info@relaxroutetravels.com</span>
+          <span>relaxroutetravels@gmail.com</span>
         </a>
       </div>
 
@@ -77,7 +77,8 @@ export default function TopBar() {
         
         {/* Instagram */}
         <a
-          href="#"
+          href="https://www.instagram.com/relaxroutetravels/"
+          target="_blank"
           className="hover:text-pink-700 transition-all hover:-translate-y-0.5"
           aria-label="Instagram"
         >
