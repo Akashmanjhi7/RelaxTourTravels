@@ -43,7 +43,7 @@ const Hero = () => {
         <button
           onClick={() =>
             document
-              .getElementById('trips-section')
+              .getElementById('domestic')
               ?.scrollIntoView({ behavior: 'smooth' })
           }
           className="group relative px-8 py-3 bg-transparent border border-white text-white overflow-hidden hover:border-yellow-500 transition-colors duration-300"

@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 
 const DomesticSection = ({ onEnquiry }) => {
   return (
-    <section className="py-20 bg-[#0a0f1c] overflow-hidden">
+    <section className="py-20 bg-[#0a0f1c] overflow-hidden" id="domestic">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-12">
