@@ -57,8 +57,8 @@ Thank you.
                 {
                   icon: Phone,
                   title: "Call Us",
-                  desc: "+91 98765 43210",
-                  link: "tel:+919876543210",
+                  desc: "+91 8799-79-7399",
+                  link: "tel:+918799797399",
                 },
                 {
                   icon: Mail,
