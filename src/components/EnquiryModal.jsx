@@ -2,42 +2,29 @@
 
 import { useEffect } from "react";
 import { X } from "lucide-react";
-
-// ✅ FIX: Utility function ko yahin define kar diya taaki import error na aaye
-const openWhatsApp = (text) => {
-  // Replace this number with your actual business number
-  const phoneNumber = "919876543210";
-  window.open(
-    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`,
-    "_blank"
-  );
-};
+import { openWhatsApp } from "@/utils/WhatsApp";
 
 const EnquiryModal = ({ isOpen, onClose, destination }) => {
-  // ✅ FIX: Hook ko sabse upar le aaye (Top Level)
-  // Ab chahe modal khule ya band ho, ye logic hamesha execute hoga
+
   useEffect(() => {
     if (isOpen) {
-      // Jab modal khule, scroll roko
       document.body.style.overflow = "hidden";
     } else {
-      // Jab modal band ho (isOpen = false), scroll wapis lao
       document.body.style.overflow = "";
     }
 
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
     };
+
     window.addEventListener("keydown", handleEsc);
 
-    // Cleanup function (Jab component unmount ho)
     return () => {
       window.removeEventListener("keydown", handleEsc);
-      document.body.style.overflow = ""; // 'unset' ki jagah empty string safe hai
+      document.body.style.overflow = "";
     };
   }, [onClose, isOpen]);
 
-  // 🛑 Ab yahan check lagao. Agar band hai toh null return karo.
   if (!isOpen) return null;
 
   const handleSubmit = (e) => {
@@ -60,12 +47,13 @@ Please share the best available package details, pricing, and inclusions.
 Thank you.
 `.trim();
 
-    openWhatsApp(text);
+    openWhatsApp(text); // ✅ sirf yahin call hoga
     onClose();
   };
 
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center p-4 overflow-y-auto">
+      
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/70 backdrop-blur-md"
@@ -74,6 +62,7 @@ Thank you.
 
       {/* Modal */}
       <div className="relative w-full max-w-md bg-slate-900 border border-white/10 shadow-2xl rounded-xl p-8 my-8 animate-in zoom-in duration-300">
+        
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -84,13 +73,16 @@ Thank you.
         </button>
 
         {/* Header */}
-        <h3 className="text-2xl font-serif text-white mb-1">Plan Your Trip</h3>
+        <h3 className="text-2xl font-serif text-white mb-1">
+          Plan Your Trip
+        </h3>
         <p className="text-yellow-500 text-sm mb-6">
           Destination: <span className="font-semibold">{destination}</span>
         </p>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
+          
           {/* Name */}
           <div className="space-y-1">
             <label className="text-xs uppercase tracking-widest text-gray-400">
@@ -156,6 +148,7 @@ Thank you.
           >
             Get Quote on WhatsApp
           </button>
+
         </form>
       </div>
     </div>
