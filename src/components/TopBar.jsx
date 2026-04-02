@@ -30,7 +30,7 @@ export default function TopBar() {
 
         {/* Email */}
         <a
-          href="mailto:relaxroutetravels@gmail.com"
+          href="mailto:info@relaxroutetravels.com"
           className="hidden md:flex items-center gap-2 hover:text-black transition-colors group"
         >
           <svg
@@ -48,7 +48,7 @@ export default function TopBar() {
             <path d="m22 2-7 20-4-9-9-4Z"></path>
             <path d="M22 2 11 13"></path>
           </svg>
-          <span>relaxroutetravels@gmail.com</span>
+          <span>info@relaxroutetravels.com</span>
         </a>
       </div>
 

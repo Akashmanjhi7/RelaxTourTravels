@@ -63,8 +63,8 @@ Thank you.
                 {
                   icon: Mail,
                   title: "Email Us",
-                  desc: "relaxroutetravels@gmail.com",
-                  link: "mailto:relaxroutetravels@gmail.com",
+                  desc: "info@relaxroutetravels.com",
+                  link: "mailto:info@relaxroutetravels.com",
                 },
               ].map((item, idx) => (
                 <a
