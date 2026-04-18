@@ -15,26 +15,28 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Relax Route Travels | India Tour Packages & Char Dham Yatra",
+    default: "Relax Route Travels | Manali, Goa, Kashmir, Dubai & Thailand Tour Packages",
     template: "%s | Relax Route Travels",
   },
 
   description:
-    "Relax Route Travels is a trusted travel agency offering India tour packages, Char Dham Yatra, spiritual tours, domestic and international trips, railway ticket booking, hotel booking, and air ticket booking services.",
+    "Relax Route Travels offers affordable tour packages for Manali, Goa, Kashmir, Rajasthan, Himachal, Dubai, Thailand and more. Book hotels, flights, and complete holiday packages with ease.",
 
   keywords: [
     "Relax Route Travels",
-    "India tour packages",
-    "Char Dham Yatra",
-    "spiritual tours India",
-    "domestic travel packages India",
-    "international travel packages",
-    "railway ticket booking",
-    "hotel booking India",
-    "flight ticket booking",
+    "Manali tour packages",
+    "Goa trip packages",
+    "Kashmir tour packages",
+    "Rajasthan travel packages",
+    "Himachal tour packages",
+    "Dubai tour packages",
+    "Thailand tour packages",
+    "domestic travel India",
+    "international holiday packages",
+    "hotel booking",
+    "flight booking",
     "travel agency India",
-    "holiday packages India",
-    "pilgrimage tours India",
+    "budget travel packages",
   ],
 
   authors: [{ name: "Relax Route Travels" }],
@@ -44,12 +46,11 @@ export const metadata = {
   metadataBase: new URL("https://relaxroutetravels.com"),
 
   openGraph: {
-    title: "Relax Route Travels | Explore India & International Destinations",
+    title: "Relax Route Travels | Explore Manali, Goa, Kashmir, Dubai & Thailand",
     description:
-      "Book Char Dham Yatra, spiritual tours, hotel booking, railway tickets, flight tickets and customized India & international travel packages with Relax Route Travels.",
+      "Book amazing travel packages for Manali, Goa, Kashmir, Rajasthan, Himachal, Dubai and Thailand. Affordable trips, hotel booking and flight services available.",
     url: "https://relaxroutetravels.com",
     siteName: "Relax Route Travels",
-    icons: { icon: "/LOGO/RELAX_LOGO.png" },
     images: [
       {
         url: "/LOGO/RELAX_LOGO.png",
@@ -66,7 +67,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Relax Route Travels",
     description:
-      "Best travel agency for Char Dham Yatra, India tours, railway ticket booking, hotel booking and air ticket booking.",
+      "Explore Manali, Goa, Kashmir, Rajasthan, Dubai & Thailand with best travel packages and deals.",
     images: ["/LOGO/RELAX_LOGO.png"],
   },
 
@@ -92,7 +93,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      
         <Navbar />
         {children}
       </body>
